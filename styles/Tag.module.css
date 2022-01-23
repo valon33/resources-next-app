@@ -1,0 +1,16 @@
+.TagContainer {
+    max-width: 1400px;
+    width: 90%;
+    min-height: calc(100vh - 180px);
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.TagHeading {
+    color: var(--color-teal-light);
+    color: var(--color-teal);
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+    margin: 50px 0;
+}

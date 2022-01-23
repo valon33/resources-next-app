@@ -1,0 +1,11 @@
+.Footer {
+    background-color: var(--color-grey-dark);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.FooterText {
+    color: var(--color-white);
+    font-weight: 700;
+}
