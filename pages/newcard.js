@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { getSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import AddNew from "../components/addNew/AddNew";
+import AddNew from "../components/AddNew/AddNew";
 import styles from "../styles/Home.module.css";
 
 const NewCard = () => {
