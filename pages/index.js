@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import CardGrid from "../components/Card/CardGrid";
 import { resourcesGroup } from "../data/html";
-// import { fetchAll } from "../lib/fetch";
+import { fetchAll } from "../lib/fetch";
 import { connectToDataBase } from "../lib/db";
 
 function sorting(data, resource) {
@@ -10,6 +10,7 @@ function sorting(data, resource) {
 }
 
 export default function Home(props) {
+    console.log(props.cards);
     return (
         <div className={styles.container}>
             <Head>
@@ -48,12 +49,11 @@ export default function Home(props) {
     );
 }
 
-// export async function getStaticProps(context) {
-//     console.log(context);
-//     const cardsData = await fetchAll();
+// export async function getServerSideProps(context) {
+//     const host = context.req.headers.host;
+//     const cardsData = await fetchAll(host);
 //     return {
 //         props: { cards: cardsData },
-//         revalidate: 10,
 //     };
 // }
 export async function getStaticProps() {
