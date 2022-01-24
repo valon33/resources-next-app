@@ -1,4 +1,4 @@
-#Live Demo of the app [https://resources-next-app.vercel.app](https://resources-next-app.vercel.app) 
+# Live Demo of the app => [https://resources-next-app.vercel.app](https://resources-next-app.vercel.app) 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
