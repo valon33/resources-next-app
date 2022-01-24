@@ -3,7 +3,7 @@ import styles from "./CardGrid.module.css";
 
 const CardGrid = (props) => {
     const { cards } = props;
-    console.log("perprov", cards);
+
     return (
         <div className={styles.Cards}>
             {cards.map((card) => (

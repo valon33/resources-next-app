@@ -10,7 +10,6 @@ function sorting(data, resource) {
 }
 
 export default function Home(props) {
-    console.log(props.cards);
     return (
         <div className={styles.container}>
             <Head>

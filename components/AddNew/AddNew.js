@@ -19,14 +19,10 @@ const AddNew = () => {
     const [resource, setResource] = useState("html");
     const [shortDescription, setShortDescription] = useState("");
 
-    console.log("name: ", name);
-    console.log("link: ", link);
-    console.log("logo: ", logo);
-    console.log("resource: ", resource);
-    console.log("shortDescription: ", shortDescription);
-
     async function addResource(event) {
         event.preventDefault();
+        if (!logo) logo = "/image.svg";
+        if (!resource) resource = "html";
 
         await addNewResource({
             name,

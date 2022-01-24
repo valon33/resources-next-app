@@ -7,11 +7,11 @@ const NavLink = () => {
         <nav className={styles.Navigation}>
             <ul className={styles.NavLinks}>
                 {resourcesGroup.map((resource) => (
-                    <li key={resource}>
-                        <Link href={"/" + resource}>
+                    <Link href={"/" + resource} key={resource} passHref>
+                        <li>
                             <a>{resource}</a>
-                        </Link>
-                    </li>
+                        </li>
+                    </Link>
                 ))}
             </ul>
         </nav>
