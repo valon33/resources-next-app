@@ -2,16 +2,14 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import CardGrid from "../components/Card/CardGrid";
 import { resourcesGroup } from "../data/html";
-import { useSession } from "next-auth/react";
-import { fetchAll } from "../lib/fetch";
+// import { fetchAll } from "../lib/fetch";
+import { connectToDataBase } from "../lib/db";
 
 function sorting(data, resource) {
     return data.filter((d) => d.resource === resource);
 }
 
 export default function Home(props) {
-    const { data: session, status } = useSession();
-
     return (
         <div className={styles.container}>
             <Head>
@@ -43,7 +41,6 @@ export default function Home(props) {
                         </section>
                     );
                 })}
-
             </main>
 
             {/* <footer className={styles.footer}>Footer</footer> */}
@@ -51,9 +48,22 @@ export default function Home(props) {
     );
 }
 
-export async function getStaticProps(context) {
-    const cardsData = await fetchAll();
+// export async function getStaticProps(context) {
+//     console.log(context);
+//     const cardsData = await fetchAll();
+//     return {
+//         props: { cards: cardsData },
+//         revalidate: 10,
+//     };
+// }
+export async function getStaticProps() {
+    const client = await connectToDataBase();
+    const db = client.db();
+    const result = await db.collection("resources").find({}).toArray();
+    const cardsData = JSON.parse(JSON.stringify(result));
+
     return {
-        props: { cards: cardsData }
+        props: { cards: cardsData },
+        revalidate: 10,
     };
 }

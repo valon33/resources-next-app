@@ -10,13 +10,6 @@ async function addNewResource(resourceDetails) {
             "Content-Type": "application/json",
         },
     });
-
-    // const data = await response.json();
-    // console.log(data);
-
-    // if (!response.ok) {
-    //     throw new Error(data.message || "Something went wrong!");
-    // }
 }
 
 const AddNew = () => {
@@ -97,9 +90,6 @@ const AddNew = () => {
                         onChange={(e) => setResource(e.target.value)}
                         // defaultValue={"html"}
                     >
-                        {/* <option value="html">Html</option>
-                        <option value="css">Css</option>
-                        <option value="javascript">Javascript</option> */}
                         {resourcesGroup.map((resource) => {
                             return (
                                 <option value={resource} key={resource}>
@@ -124,7 +114,6 @@ const AddNew = () => {
                     />
                 </div>
 
-                {/* <button type="submit" defaultValue="Submit" /> */}
                 <button className={styles.Button}>Submit</button>
             </form>
         </div>

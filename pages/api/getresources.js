@@ -1,4 +1,3 @@
-import { MongoClient } from "mongodb";
 import { connectToDataBase } from "../../lib/db";
 
 export default async function handler(req, res) {

@@ -1,27 +1,6 @@
 import styles from "./Card.module.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useState } from "react";
-
-async function deleteResource(id) {
-    try {
-        const response = await fetch(`/api/delete/${id}`, {
-            method: "Delete",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-    } catch (error) {
-        console.log(error);
-    }
-
-    // const data = await response.json();
-    // console.log(data);
-
-    // if (!response.ok) {
-    //     throw new Error(data.message || "Something went wrong!");
-    // }
-}
 
 const Card = ({ name, logo, link, text, id }) => {
     const router = useRouter();

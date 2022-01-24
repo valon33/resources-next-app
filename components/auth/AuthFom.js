@@ -39,8 +39,6 @@ function AuthForm() {
         const enteredEmail = emailInputRef.current.value;
         const enteredPassword = passwordInputRef.current.value;
 
-        // optional: Add validation
-
         if (isLogin) {
             console.log(enteredEmail, enteredPassword);
             const result = await signIn("credentials", {
@@ -65,10 +63,9 @@ function AuthForm() {
     }
 
     return (
-        <section className={styles.Auth} style={{padding:"50px 0"}}>
-            {/* <h1>{isLogin ? "Login" : "Sign Up"}</h1> */}
+        <section className={styles.Auth} style={{ padding: "50px 0" }}>
             <form onSubmit={submitHandler} className={styles.Form}>
-            <h1>{isLogin ? "Login" : "Sign Up"}</h1>
+                <h1>{isLogin ? "Login" : "Sign Up"}</h1>
                 <div className={styles.FormGroup}>
                     <label htmlFor="email">Your Email</label>
                     <input
