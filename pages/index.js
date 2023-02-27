@@ -31,13 +31,13 @@ export default function Home(props) {
                                     {`Resources for ${resourceGroup.toUpperCase()}`}
                                 </h2>
                                 <div className={styles.Cards}>
-                                    {/* <CardGrid
+                                    <CardGrid
                                         cards={sorting(
                                             props.cards,
                                             resourceGroup
                                         ).slice(0, 10)}
-                                    /> */}
-                                    <CardComponent />
+                                    />
+                                    {/* <CardComponent /> */}
                                 </div>
                             </div>
                         </section>
