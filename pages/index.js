@@ -2,9 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import CardGrid from "../components/Card/CardGrid";
 import { resourcesGroup } from "../data/html";
-import { fetchAll } from "../lib/fetch";
 import { connectToDataBase } from "../lib/db";
-import CardComponent from "./card";
 
 function sorting(data, resource) {
     return data.filter((d) => d.resource === resource);
@@ -37,7 +35,6 @@ export default function Home(props) {
                                             resourceGroup
                                         ).slice(0, 10)}
                                     />
-                                    {/* <CardComponent /> */}
                                 </div>
                             </div>
                         </section>

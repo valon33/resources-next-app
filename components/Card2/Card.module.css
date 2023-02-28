@@ -1,0 +1,9 @@
+.CardTitle{
+  font-weight: bold;
+  color:var(--color-teal);
+  transition: all .1s ease-in;
+}
+
+.CardTitle:hover{
+  color:var(--color-teal-light)
+}
