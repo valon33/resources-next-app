@@ -40,10 +40,20 @@ li {
   box-sizing: border-box;
 }
 
+.wtf {
+  max-width: 80%;
+  min-height: 90vh;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-form {
   min-width: 400px;
+  height: max-content;
   margin: 0 auto;
-  /* padding: 100px; */
 }
 
 .login-form-button {

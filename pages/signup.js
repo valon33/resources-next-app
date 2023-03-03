@@ -1,7 +1,6 @@
-import React from "react";
+import Form from "../components/auth/Form";
 
-const signup = () => {
-    return <div>signup</div>;
+const Login = () => {
+    return <Form login={false} />;
 };
-
-export default signup;
+export default Login;
