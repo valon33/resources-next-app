@@ -1,14 +1,19 @@
+import React, { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { Card } from "antd";
+import { EllipsisOutlined, SettingOutlined } from "@ant-design/icons";
+import { Avatar, Skeleton, Switch } from "antd";
 import CardLogo from "./CardLogo";
 import CardTitle from "./CardTitle";
 import CardText from "./CardText";
+import { FloatButton } from "antd";
 
 const { Meta } = Card;
 
 const CardComponent = ({ name, logo, link, text, id }) => {
+    const [loading, setLoading] = useState(true);
     const router = useRouter();
     const { data: session, status } = useSession();
 
@@ -39,6 +44,9 @@ const CardComponent = ({ name, logo, link, text, id }) => {
                     status === "authenticated" && [
                         <DeleteOutlined
                             key="delete"
+                            style={{
+                                color: "red",
+                            }}
                             onClick={() => removeResource(id)}
                         />,
                     ]
