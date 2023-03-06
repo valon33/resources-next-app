@@ -10,6 +10,7 @@ function AuthPage() {
 
     useEffect(() => {
         getSession().then((session) => {
+            console.log("Session", session);
             if (session) {
                 router.replace("/");
             } else {
@@ -26,6 +27,3 @@ function AuthPage() {
 }
 
 export default AuthPage;
-
-
-
