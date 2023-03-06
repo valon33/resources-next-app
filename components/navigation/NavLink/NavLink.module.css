@@ -1,20 +1,22 @@
 .Navigation {
-    /* flex: 1; */
+  /* flex: 1; */
 }
 
 .NavLinks {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
+
 .NavLinks li {
-    color: var(--color-white);
-    font-size: 18px;
-    font-weight: 900;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 7px;
+  cursor: pointer;
+  transition: transform 0.15s ease-in;
+  transition: color 0.25s ease-in;
 }
 .NavLinks li:hover {
-    color: var(--color-green);
-    transform: scale(1.05);
+  transform: scale(1.05);
+  color: var(--color-green-light);
 }

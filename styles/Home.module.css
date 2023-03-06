@@ -1,41 +1,35 @@
 .container {
-    background-color: var(--color-green-light);
-    background-color: var(--color-skin);
-    background-color: var(--color-green-light-2);
-    background-color: var(--color-white);
-    width: 100%;
+  background-color: var(--color-white);
+  width: 100%;
 }
 
 .SectionCards {
-    width: 100%;
+  width: 100%;
 }
 
 .SectionCards:nth-child(even) {
-    background: var(--color-green-light-2);
+  background: var(--color-green-light-2);
 }
 
 .cardGridSectionContainer {
-    display: flex;
-    flex-direction: column;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 150px 25px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 150px 25px;
 }
 
 .SectionHeading {
-    color: var(--color-teal-light);
-    color: var(--color-teal);
-    font-size: 35px;
-    font-weight: 900;
-    text-align: center;
-    margin: 50px 0;
+  color: var(--color-teal);
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+  margin: 50px 0;
 }
 
 .AddNew {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--color-teal);
-    background-color: var(--color-white);
-    padding: 30px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  padding: 30px;
 }
-

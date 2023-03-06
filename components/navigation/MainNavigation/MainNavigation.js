@@ -3,46 +3,18 @@ import Logo from "../../Logo/Logo";
 import NavLink from "../NavLink/NavLink";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import NavButtons from "../NavButtons/NavButtons";
 
 const MainNavigation = () => {
-    const { data: session, status } = useSession();
+  const { data: session, status } = useSession();
 
-    return (
-        <div className={styles.MainNavigation}>
-            <Logo />
-            <NavLink />
-
-            {status === "loading" && (
-                <div>
-                    <p>Loading...</p>
-                </div>
-            )}
-
-            {status === "unauthenticated" && (
-                <div className={styles.MainNavigationBtn}>
-                    <Link href={"/auth"}>
-                        <a className={styles.LinkBtn}>LogIn/SignUp</a>
-                    </Link>
-                </div>
-            )}
-
-            {status === "authenticated" && (
-                <div>
-                    <div className={styles.MainNavigationBtn}>
-                        <button onClick={signOut} className={styles.LogOutBtn}>
-                            Log Out
-                        </button>
-                        <Link href={"/newcard"}>
-                            <a className={styles.LinkBtn}>Add</a>
-                        </Link>
-                    </div>
-                    {/* <div>
-                        <p>Loged in as {session.user.email.split("@")[0]}</p>
-                    </div> */}
-                </div>
-            )}
-        </div>
-    );
+  return (
+    <div className={styles.MainNavigation}>
+      <Logo />
+      <NavLink />
+      <NavButtons />
+    </div>
+  );
 };
 
 export default MainNavigation;
