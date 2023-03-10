@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
-import Form from "../components/auth/Form";
+import AuthForm from "../components/Form/AuthForm";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 
 const Login = () => {
-  const { data: session } = useSession();
-  const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
+    const { data: session } = useSession();
+    const [isLoading, setIsLoading] = useState(true);
+    const router = useRouter();
 
-  useEffect(() => {
-    session ? router.replace("/") : setIsLoading(false);
-  }, [router, session]);
+    useEffect(() => {
+        session ? router.replace("/") : setIsLoading(false);
+    }, [router, session]);
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
+    if (isLoading) {
+        return <p>Loading...</p>;
+    }
 
-  return <Form login />;
+    return <AuthForm login />;
 };
 export default Login;

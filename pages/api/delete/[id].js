@@ -11,12 +11,10 @@ export default async function handler(req, res) {
 
     const client = await connectToDataBase(res);
     const db = client.db();
-    const r = await db
+    await db
         .collection("resources")
         .find({ _id: new ObjectId(id) })
         .toArray();
-
-    console.log(r);
 
     if (!session) {
         res.status(401).json({

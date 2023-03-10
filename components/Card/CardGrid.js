@@ -1,5 +1,5 @@
 import Card from "./Card";
-import CardComponent from "../Card2/Card";
+import CardSkeleton from "./CardSkeleton";
 import styles from "./CardGrid.module.css";
 
 const CardGrid = (props) => {
@@ -7,16 +7,18 @@ const CardGrid = (props) => {
 
     return (
         <div className={styles.Cards}>
-            {cards.map((card) => (
-                <CardComponent
-                    key={card._id}
-                    name={card.name}
-                    logo={card.logo}
-                    link={card.link}
-                    text={card.shortDescription}
-                    id={card._id}
-                />
-            ))}
+            {!cards && <CardSkeleton />}
+            {cards &&
+                cards.map((card) => (
+                    <Card
+                        key={card._id}
+                        name={card.name}
+                        logo={card.logo}
+                        link={card.link}
+                        text={card.shortDescription}
+                        id={card._id}
+                    />
+                ))}
         </div>
     );
 };

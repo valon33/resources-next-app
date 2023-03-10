@@ -1,6 +1,6 @@
 .TagContainer {
+    width: 100%;
     max-width: 1400px;
-    width: 90%;
     min-height: calc(100vh - 180px);
     margin: 0 auto;
     padding: 20px 0;

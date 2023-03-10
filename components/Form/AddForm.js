@@ -1,41 +1,38 @@
+import { useRouter } from "next/router";
 import { Button, Form, Input, Select } from "antd";
 import { resourcesGroup } from "../../data/html";
 import { addNewResource } from "../../lib/fetch";
+import { useSession } from "next-auth/react";
+import FormWrapper from "./FormWrapper";
 const { TextArea } = Input;
 
-const onFinish = ({ name, link, logo, resource, shortDescription }) => {
-    if (!logo) logo = "/image.svg";
-    if (!resource) resource = "html";
-    addNewResource({ name, link, logo, resource, shortDescription });
-};
-
 const Add = () => {
+    const [form] = Form.useForm();
+    const router = useRouter();
+    const { data: session, status } = useSession();
+
+    const onFinish = async ({
+        name,
+        link,
+        logo,
+        resource,
+        shortDescription,
+    }) => {
+        if (!logo) logo = "/image.svg";
+        if (!resource) resource = "html";
+        await addNewResource({
+            name,
+            link,
+            logo,
+            resource,
+            shortDescription,
+        });
+        form.resetFields();
+        router.replace(`/${resource}`);
+    };
+
     return (
-        <div
-            style={{
-                width: "600px",
-                border: "1px solid black",
-                height: "700px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "70px",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: "7px",
-                margin: "80px auto",
-                boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)",
-            }}
-        >
-            <h2
-                style={{
-                    fontSize: "35px",
-                    fontWeight: "900",
-                    textAlign: "center",
-                    color: "var(--color-grey-dark)",
-                }}
-            >
-                Add Resource
-            </h2>
+        <FormWrapper formTitle={"Add Resource"}>
             <Form
                 labelCol={{
                     span: 6,
@@ -43,11 +40,10 @@ const Add = () => {
                 wrapperCol={{
                     span: 14,
                 }}
+                form={form}
                 layout="horizontal"
                 style={{
                     width: "100%",
-                    //   maxWidth: 650,
-                    //   margin: "0 auto",
                 }}
                 onFinish={onFinish}
             >
@@ -113,7 +109,7 @@ const Add = () => {
                     </Button>
                 </Form.Item>
             </Form>
-        </div>
+        </FormWrapper>
     );
 };
 

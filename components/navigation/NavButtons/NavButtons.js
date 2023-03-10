@@ -5,6 +5,7 @@ import { Button } from "antd";
 
 const NavButtons = () => {
     const { data: session, status } = useSession();
+
     return (
         <>
             {status === "loading" && (

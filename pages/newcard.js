@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { getSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import AddNew from "../components/AddNew/AddNew";
+import AddForm from "../components/Form/AddForm";
 import styles from "../styles/Home.module.css";
 
 const NewCard = () => {
@@ -24,7 +24,7 @@ const NewCard = () => {
 
     return (
         <div className={styles.AddNew}>
-            <AddNew />;
+            <AddForm />;
         </div>
     );
 };
