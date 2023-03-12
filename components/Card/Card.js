@@ -19,7 +19,7 @@ const CardComponent = ({ name, logo, link, text, id }) => {
                 style={{
                     width: 300,
                     border: "5px solid var(--color-green-light-2)",
-                    // border: "5px solid var(--color-skin)",
+                    borderRadius: "12px",
                 }}
                 actions={
                     status === "authenticated" && [

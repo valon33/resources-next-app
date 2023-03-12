@@ -6,6 +6,7 @@ const FormWrapper = ({ children, formTitle }) => {
             style={{
                 //  minHeight: "90vh",
                 height: "max-content",
+                height: "79vh",
             }}
         >
             <div

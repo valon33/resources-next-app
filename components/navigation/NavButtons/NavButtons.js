@@ -17,12 +17,12 @@ const NavButtons = () => {
             {status === "unauthenticated" && (
                 <div className={styles.MainNavigationBtn}>
                     <Link href={"/login"} passHref>
-                        <Button type="text" style={{ color: "white" }}>
+                        <Button type="text" className={styles.btn}>
                             LogIn
                         </Button>
                     </Link>
                     <Link href={"/signup"} passHref>
-                        <Button type="text" style={{ color: "white" }}>
+                        <Button type="text" className={styles.btn}>
                             SignUp
                         </Button>
                     </Link>
@@ -32,14 +32,14 @@ const NavButtons = () => {
             {status === "authenticated" && (
                 <div className={styles.MainNavigationBtn}>
                     <Link href={"/newcard"} passHref>
-                        <Button type="text" style={{ color: "white" }}>
+                        <Button type="text" className={styles.btn}>
                             Add
                         </Button>
                     </Link>
                     <Button
                         type="text"
                         onClick={signOut}
-                        style={{ color: "white" }}
+                        className={styles.btn}
                     >
                         Log Out
                     </Button>
