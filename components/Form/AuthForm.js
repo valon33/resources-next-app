@@ -3,17 +3,17 @@ import { Button, Form, Input } from "antd";
 import Link from "next/link";
 import { loginUser, signUpUser } from "../../lib/fetch";
 import FormWrapper from "./FormWrapper";
+import styles from "./Form.module.css";
 
 const App = ({ login }) => {
     const onFinish = ({ username, password }) => {
         login ? loginUser(username, password) : signUpUser(username, password);
     };
     return (
-        // <div className="wtf">
         <FormWrapper formTitle={`${login ? "Log in" : "Sign Up"}`}>
             <Form
                 name="normal_login"
-                className="login-form"
+                className={styles.loginForm}
                 initialValues={{
                     remember: true,
                 }}
@@ -56,11 +56,7 @@ const App = ({ login }) => {
                     <Button
                         type="primary"
                         htmlType="submit"
-                        style={{
-                            backgroundColor: "var(--color-grey-dark)",
-                            border: "none",
-                        }}
-                        className="login-form-button"
+                        className={`${styles.formButton} ${styles.loginFormButton}`}
                     >
                         {" "}
                         {login ? "Log in" : "Sign Up"}
@@ -76,7 +72,6 @@ const App = ({ login }) => {
                 </Form.Item>
             </Form>
         </FormWrapper>
-        // {/* </div> */}
     );
 };
 export default App;

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  /* width: 100%; */
   background-color: var(--color-grey-dark);
   padding: 5px;
 }

@@ -1,9 +1,23 @@
-.CardTitle{
+
+.card{
+  width: 300px;
+  border: 5px solid var(--color-green-light-2);
+  border-radius: 12px;
+}
+
+.cardTitle{
   font-weight: bold;
   color:var(--color-teal);
   transition: all .1s ease-in;
 }
 
-.CardTitle:hover{
+.cardTitle:hover{
   color:var(--color-teal-light)
+}
+
+.cardGrid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }

@@ -1,0 +1,59 @@
+.loginForm {
+  width: 70%;
+  height: max-content;
+  margin: 0 auto;
+}
+
+
+.formButton,
+.formButton:focus,
+.formButton:visited{
+  background-color: var(--color-grey-dark);
+  border: none;
+}
+
+.formButton:hover {
+  background-color: var(--color-grey-medium-2);
+}
+
+.formButton:active {
+  transform: scale(.98);
+}
+
+
+.loginFormButton {
+  width: 100%;
+  transition: all .15s ease-in;
+}
+
+
+.addFormButton {
+  margin-left: 50px;
+  margin-top: 30px;
+  transition: all .15s ease-in;
+}
+
+.formContainer{
+  width: 600px;
+  border: 1px solid var(--color-grey-dark);
+  height:700px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  box-shadow: 10px 10px 5px 0px rgba(3,3,3,.55)
+}
+
+.formHeading{
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--color-grey-dark);
+}
+
+

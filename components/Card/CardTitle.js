@@ -8,7 +8,7 @@ const CardTitle = ({ link, name }) => {
             <a target="_blank">
                 {" "}
                 <Tooltip title={name}>
-                    <span className={styles.CardTitle}>{name}</span>
+                    <span className={styles.cardTitle}>{name}</span>
                 </Tooltip>
             </a>
         </Link>

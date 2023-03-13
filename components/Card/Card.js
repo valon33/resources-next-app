@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { Card, Avatar } from "antd";
 import CardTitle from "./CardTitle";
 import { removeResource } from "../../lib/fetch";
+import styles from "./Card.module.css";
 
 const { Meta } = Card;
 
@@ -16,11 +17,7 @@ const CardComponent = ({ name, logo, link, text, id }) => {
         <>
             <Card
                 hoverable
-                style={{
-                    width: 300,
-                    border: "5px solid var(--color-green-light-2)",
-                    borderRadius: "12px",
-                }}
+                className={styles.card}
                 actions={
                     status === "authenticated" && [
                         <DeleteOutlined

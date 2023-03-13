@@ -6,13 +6,13 @@
   align-items: center;
 }
 
-.btn {
-  color: var(--color-white);
-  font-weight: 700;
+.navBtn {
+  color: var(--color-white) !important;
+  font-weight: 700 !important;
+  transition: all .15s ease-in !important;
 }
 
-.btn:hover {
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
-border-radius: 15px;
+.navBtn:hover {
+  border: 1px solid var(--color-white) !important;
+  border-radius: 15px;
 }

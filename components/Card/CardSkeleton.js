@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DeleteOutlined } from "@ant-design/icons";
 import { Card } from "antd";
 import { Avatar, Skeleton } from "antd";
@@ -6,6 +6,7 @@ const { Meta } = Card;
 
 const CardSkeleton = () => {
     const [loading, setLoading] = useState(true);
+
     return (
         <Card
             style={{ width: 300, marginTop: 16 }}

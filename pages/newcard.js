@@ -11,7 +11,7 @@ const NewCard = () => {
     useEffect(() => {
         getSession().then((session) => {
             if (!session) {
-                router.replace("/auth");
+                router.replace("/login");
             } else {
                 setIsLoading(false);
             }

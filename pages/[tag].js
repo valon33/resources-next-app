@@ -13,8 +13,8 @@ const TagResources = ({ cards }) => {
                 <title>{`Resource App | ${tag} resources`} </title>
                 <meta name="description" content="Bookmark manager app" />
             </Head>
-            <div className={styles.TagContainer}>
-                <h2 className={styles.TagHeading}>
+            <div className={styles.tagContainer}>
+                <h2 className={styles.tagHeading}>
                     {`Resources for ${tag.toUpperCase()}`}
                 </h2>
                 <CardGrid cards={cards} />

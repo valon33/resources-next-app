@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
-import styles from "./NavButtons.module.css";
 import { Button } from "antd";
+import styles from "./NavButtons.module.css";
 
 const NavButtons = () => {
-    const { data: session, status } = useSession();
+    const { status } = useSession();
 
     return (
         <>
@@ -17,12 +17,12 @@ const NavButtons = () => {
             {status === "unauthenticated" && (
                 <div className={styles.MainNavigationBtn}>
                     <Link href={"/login"} passHref>
-                        <Button type="text" className={styles.btn}>
+                        <Button type="text" className={styles.navBtn}>
                             LogIn
                         </Button>
                     </Link>
                     <Link href={"/signup"} passHref>
-                        <Button type="text" className={styles.btn}>
+                        <Button type="text" className={styles.navBtn}>
                             SignUp
                         </Button>
                     </Link>
@@ -32,14 +32,14 @@ const NavButtons = () => {
             {status === "authenticated" && (
                 <div className={styles.MainNavigationBtn}>
                     <Link href={"/newcard"} passHref>
-                        <Button type="text" className={styles.btn}>
+                        <Button type="text" className={styles.navBtn}>
                             Add
                         </Button>
                     </Link>
                     <Button
                         type="text"
                         onClick={signOut}
-                        className={styles.btn}
+                        className={styles.navBtn}
                     >
                         Log Out
                     </Button>

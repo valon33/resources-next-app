@@ -1,13 +1,13 @@
 import Card from "./Card";
 import CardSkeleton from "./CardSkeleton";
-import styles from "./CardGrid.module.css";
+import styles from "./Card.module.css";
 
 const CardGrid = (props) => {
     const { cards } = props;
 
     return (
-        <div className={styles.Cards}>
-            {!cards && <CardSkeleton />}
+        <div className={styles.cardGrid}>
+            {!cards && <CardSkeleton num={8} />}
             {cards &&
                 cards.map((card) => (
                     <Card

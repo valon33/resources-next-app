@@ -11,12 +11,12 @@ const Footer = () => {
             <NavLink />
             {status === "authenticated" && (
                 <div className={styles.FooterText}>
-                    <p>Loged in as {session.user.email.split("@")[0]}</p>
+                    <p>Logged in as {session.user.email.split("@")[0]}</p>
                 </div>
             )}
             {status !== "authenticated" && (
                 <div className={styles.FooterText}>
-                    <p>You are not loged in !</p>
+                    <p>You are not logged in !</p>
                 </div>
             )}
         </footer>

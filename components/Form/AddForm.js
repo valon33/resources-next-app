@@ -4,6 +4,7 @@ import { resourcesGroup } from "../../data/html";
 import { addNewResource } from "../../lib/fetch";
 import { useSession } from "next-auth/react";
 import FormWrapper from "./FormWrapper";
+import styles from "./Form.module.css";
 const { TextArea } = Input;
 
 const Add = () => {
@@ -98,12 +99,7 @@ const Add = () => {
                     <Button
                         type="primary"
                         htmlType="submit"
-                        style={{
-                            backgroundColor: "var(--color-grey-dark)",
-                            border: "none",
-                            marginLeft: "50px",
-                            marginTop: "30px",
-                        }}
+                        className={`${styles.formButton} ${styles.loginFormButton}`}
                     >
                         Add Resource
                     </Button>

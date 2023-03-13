@@ -18,19 +18,19 @@ export default function Home(props) {
                 <link
                     rel="apple-touch-icon"
                     sizes="180x180"
-                    href="/apple-touch-icon.png"
+                    href="./apple-touch-icon.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="32x32"
-                    href="/favicon-32x32.png"
+                    href="./favicon-32x32.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="16x16"
-                    href="/favicon-16x16.png"
+                    href="./favicon-16x16.png"
                 />
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
@@ -39,14 +39,14 @@ export default function Home(props) {
                 {resourcesGroup.slice(0, 5).map((resourceGroup) => {
                     return (
                         <section
-                            className={styles.SectionCards}
+                            className={styles.sectionCards}
                             key={resourceGroup}
                         >
                             <div className={styles.cardGridSectionContainer}>
-                                <h2 className={styles.SectionHeading}>
+                                <h2 className={styles.sectionHeading}>
                                     {`Resources for ${resourceGroup.toUpperCase()}`}
                                 </h2>
-                                <div className={styles.Cards}>
+                                <div className={styles.cards}>
                                     <CardGrid
                                         cards={sorting(
                                             props.cards,

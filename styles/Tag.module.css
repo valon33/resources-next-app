@@ -1,4 +1,4 @@
-.TagContainer {
+.tagContainer {
     width: 100%;
     max-width: 1400px;
     min-height: calc(100vh - 180px);
@@ -6,7 +6,7 @@
     padding: 20px 0;
 }
 
-.TagHeading {
+.tagHeading {
     color: var(--color-teal-light);
     color: var(--color-teal);
     font-size: 35px;
