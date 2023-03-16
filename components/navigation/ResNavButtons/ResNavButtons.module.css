@@ -1,8 +1,6 @@
 .MainNavigationBtn {
   display: flex;
   justify-content: space-between;
-  height: 100%;
-  margin: auto 0;
   align-items: center;
 }
 
@@ -10,6 +8,7 @@
   color: var(--color-white) !important;
   font-weight: 700 !important;
   transition: all 0.15s ease-in !important;
+  margin: 0 12px;
 }
 
 .navBtn:hover {
@@ -17,8 +16,17 @@
   border-radius: 15px;
 }
 
-/* Small devices (landscape phones, 576px and up) */
 @media only screen and (max-width: 767px) {
+  .MainNavigationBtn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
   .MainNavigationBtn {
     display: none;
   }

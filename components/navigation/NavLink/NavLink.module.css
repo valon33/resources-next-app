@@ -1,6 +1,3 @@
-.Navigation {
-  /* flex: 1; */
-}
 
 .NavLinks {
   display: flex;
@@ -19,4 +16,11 @@
 .NavLinks li:hover {
   transform: scale(1.05);
   color: var(--color-green-light);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 767px) {
+  .NavLinks {
+    display: none;
+  }
 }
