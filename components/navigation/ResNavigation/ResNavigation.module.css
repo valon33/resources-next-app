@@ -1,0 +1,66 @@
+/* ResNavigation */
+ .resNavigation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  background-color: var(--color-grey-dark);
+  border-top: 1px solid var(--color-grey-light);
+  border-bottom: 1px solid var(--color-grey-light);
+ }
+
+/* ResLinks */
+
+.resNavLinks {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+
+/* ResButton */
+
+.navBtn {
+  color: var(--color-white) !important;
+  font-weight: 700 !important;
+  transition: all 0.15s ease-in !important;
+  border: 1px solid var(--color-white) !important;
+  border-radius: 15px !important;
+  margin: 0 12px;
+}
+
+.navBtn:hover {
+  background-color: var(--color-white)!important;
+  color: var(--color-grey-dark) !important;
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 771px) {
+  .resNavLinks {
+    font-size: 20px;
+    transition: transform 0.15s ease-in;
+    transition: color 0.25s ease-in;
+  }
+
+  .resNavLinks li:hover {
+    transform: scale(1.05);
+    color: var(--color-green-light);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 771px) {
+  .resNavLinks {
+    display: none;
+  }
+
+  .ResNavigationBtn {
+    display: none;
+  }
+}
+
+
+

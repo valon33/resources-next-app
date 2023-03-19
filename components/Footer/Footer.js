@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 
 const Footer = () => {
     const { data: session, status } = useSession();
+
     return (
         <footer className={styles.Footer}>
             <Logo />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AuthForm from "../components/Form/AuthForm";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import styles from "../styles/Home.module.css";
 
 const SignUp = () => {
     const { data: session } = useSession();
@@ -16,6 +17,10 @@ const SignUp = () => {
         return <p>Loading...</p>;
     }
 
-    return <AuthForm login={false} />;
+    return (
+        <div className={styles.centerFormContainer}>
+            <AuthForm login={false} />;
+        </div>
+    );
 };
 export default SignUp;

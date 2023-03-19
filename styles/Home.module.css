@@ -28,7 +28,21 @@
   margin: 50px 0;
 }
 
-.AddNew {
-  width: 100%;
-  padding: 30px;
+.centerFormContainer {
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 767px) {
+  .cardGridSectionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
 }

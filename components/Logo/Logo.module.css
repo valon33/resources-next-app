@@ -4,3 +4,12 @@
   color: var(--color-white);
   cursor: pointer;
 }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 767px) {
+.Logo{
+  font-size: 25px;
+
+}
+}

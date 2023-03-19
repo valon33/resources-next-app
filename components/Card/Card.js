@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { DeleteOutlined } from "@ant-design/icons";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
@@ -11,7 +10,7 @@ const { Meta } = Card;
 
 const CardComponent = ({ name, logo, link, text, id }) => {
     const router = useRouter();
-    const { data: session, status } = useSession();
+    const { status } = useSession();
 
     return (
         <>

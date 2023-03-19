@@ -7,7 +7,6 @@ export default async function handler(req, res) {
         const db = client.db();
 
         let result;
-        let r;
         try {
             result = await db.collection("resources").find({}).toArray();
         } catch (error) {
@@ -23,7 +22,6 @@ export default async function handler(req, res) {
         res.status(200).json({
             msg: "Successfully found resources",
             data: result,
-            // d: r,
         });
     }
 }

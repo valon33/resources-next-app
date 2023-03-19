@@ -36,7 +36,7 @@
 .formContainer{
   width: 600px;
   border: 1px solid var(--color-grey-dark);
-  height:700px;
+  /* height:700px; */
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 7px;
-  margin: 80px auto;
+  /* margin: auto; */
   padding: 40px 30px;
   box-shadow: 10px 10px 5px 0px rgba(3,3,3,.55)
 }
@@ -57,3 +57,18 @@
 }
 
 
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 767px) {
+  .loginForm {
+    width: 95%;
+  }
+
+  .formContainer{
+    width: 85%;
+
+  }
+
+  .formHeading{
+    font-size: 25px;
+  }
+}

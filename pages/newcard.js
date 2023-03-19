@@ -10,6 +10,7 @@ const NewCard = () => {
 
     useEffect(() => {
         getSession().then((session) => {
+            console.log("session", session);
             if (!session) {
                 router.replace("/login");
             } else {
@@ -23,7 +24,7 @@ const NewCard = () => {
     }
 
     return (
-        <div className={styles.AddNew}>
+        <div className={styles.centerFormContainer}>
             <AddForm />;
         </div>
     );

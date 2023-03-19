@@ -1,7 +1,8 @@
 
 .NavLinks {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
 }
 
 .NavLinks li {
@@ -19,8 +20,15 @@
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 770px) {
   .NavLinks {
     display: none;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 980px) {
+
+  .NavLinks li {
+    font-size: 14px;
   }
 }

@@ -21,7 +21,17 @@
 
 .cardGrid {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 767px) {
+  .cardGrid {
+    justify-content: center;
+    align-items: center;
+  }
 }

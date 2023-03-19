@@ -12,6 +12,8 @@ const Add = () => {
     const router = useRouter();
     const { data: session, status } = useSession();
 
+    console.log("session", session?.user?.id);
+
     const onFinish = async ({
         name,
         link,
